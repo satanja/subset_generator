@@ -61,11 +61,10 @@ impl<'a, T> SubsetGenerator<'a, T> {
     ///
     /// let mut data = vec![1, 2, 3];
     /// let sg = SubsetGenerator::new(&data, true);
-    /// assert_eq!(sg.iter().count(), 8);
+    /// assert_eq!(sg.into_iter().count(), 8);
     ///
     /// data = vec![42];
-    /// let sg = SubsetGenerator::new(&data, true);
-    /// assert_eq!(sg.iter().count(), 2);
+    /// // additional computations...
     /// ```
     pub fn into_iter(self) -> SubsetIter<'a, T> {
         let len = self.data.len();
