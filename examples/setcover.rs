@@ -24,7 +24,6 @@ fn main() {
             }
         }
 
-        // verify whether its a solution, and whether its a better solution
         if result.len() == universe && subset.len() <= opt {
             opt = subset.len();
         }
